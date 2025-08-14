@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Names of God Study - Take Home Guide</title>
+    <meta name="description" content="Discover the character of God through His biblical names. Interactive study guide with Hebrew, Greek, and descriptive titles.">
+    
+    <!-- Favicon to match your site -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.5;
+            color: #2c3e50;
+            background: #f8f9fa;
+            padding: 20px 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .main-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .verse-box {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #e74c3c;
+            backdrop-filter: blur(10px);
+        }
+        
+        .verse-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .verse-ref {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.8;
+        }
+        
+        .intro-text {
+            font-size: 1rem;
+            margin: 1.5rem 0;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .website-highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .website-highlight:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .website-highlight a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-3px);
+        }
+        
+        .section h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            background: #3498db;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .steps {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: 1rem;
+            padding-left: 2.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #3498db, #e74c3c);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.5rem;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem;
+            background: white;
+            border-radius: 6px;
+            padding-left: 2rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0.5rem;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        
+        .category {
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: scale(1.05);
+        }
+        
+        .tips {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .tip-item {
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #e74c3c;
+            transition: transform 0.3s ease;
+        }
+        
+        .tip-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .tip-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .tip-text {
+            font-size: 0.9rem;
+            color: #5a6c7d;
+            line-height: 1.4;
+        }
+        
+        .sample-names {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .sample-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            border-bottom: 1px solid #ecf0f1;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            transition: background 0.3s ease;
+        }
+        
+        .sample-name:hover {
+            background: #f8f9fa;
+        }
+        
+        .sample-name:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .meaning {
+            color: #5a6c7d;
+            font-size: 0.9rem;
+        }
+        
+        /* Bottom Section */
+        .bottom-section {
+            padding: 2rem;
+            background: linear-gradient(135deg, #ecf0f1 0%, #ffffff 100%);
+        }
+        
+        .challenge-box {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(231,76,60,0.3);
+        }
+        
+        .challenge-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .challenge-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .website-footer {
+            background: rgba(255,255,255,0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .website-footer:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .website-footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .remember-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Navigation */
+        .nav-buttons {
+            text-align: center;
+            padding: 1rem 2rem;
+            background: #f8f9fa;
+            border-top: 1px solid #ecf0f1;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(52,152,219,0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px 0;
+            }
+            
+            .header {
+                padding: 1.5rem;
+            }
+            
+            .main-title {
+                font-size: 1.8rem;
+            }
+            
+            .main-content {
+                padding: 1.5rem;
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .sample-name {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            
+            .bottom-section {
+                padding: 1.5rem;
+            }
+            
+            .nav-buttons {
+                padding: 1rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: none;
+            }
+            
+            .nav-buttons {
+                display: none;
+            }
+            
+            .website-highlight,
+            .website-footer {
+                background: #ddd !important;
+                color: #333 !important;
+            }
+            
+            .website-highlight a,
+            .website-footer a {
+                color: #333 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="logo">📖</div>
+            <h1 class="main-title">Names of God Study</h1>
+            <p class="subtitle">Discover the Character of God Through His Names</p>
+            
+            <div class="verse-box">
+                <p class="verse-text">"O LORD, our Lord, how majestic is your name in all the earth!"</p>
+                <p class="verse-ref">Psalm 8:1</p>
+            </div>
+            
+            <p class="intro-text">
+                Each name of God reveals His character and invites us into deeper relationship with Him. This study is a starting point to complement our church teachings.
+            </p>
+            
+            <div class="website-highlight">
+                <a href="https://names-of-god-study.vercel.app/" target="_blank">
+                    ✨ Start Your Study Now ✨
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- How to Use Section -->
+            <div class="section">
+                <h3><span class="section-icon">🚀</span>How to Use</h3>
+                <ol class="steps">
+                    <li>Visit website on any device</li>
+                    <li>Click any name to explore</li>
+                    <li>Listen to pronunciation 🔊</li>
+                    <li>Bookmark favourites 🔖</li>
+                    <li>Add personal notes</li>
+                    <li>Track your progress</li>
+                </ol>
+                
+                <div class="categories">
+                    <div class="category">Hebrew Names</div>
+                    <div class="category">Greek Names</div>
+                    <div class="category">Descriptive Titles</div>
+                </div>
+            </div>
+            
+            <!-- Features Section -->
+            <div class="section">
+                <h3><span class="section-icon">✨</span>Features</h3>
+                <ul class="feature-list">
+                    <li>Pronunciation guides</li>
+                    <li>Personal bookmarks</li>
+                    <li>Note-taking tools</li>
+                    <li>Prayer writing</li>
+                    <li>Progress tracking</li>
+                    <li>Mobile-friendly</li>
+                    <li>Biblical context</li>
+                    <li>Application guides</li>
+                </ul>
+            </div>
+            
+            <!-- Study Tips Section -->
+            <div class="section">
+                <h3><span class="section-icon">💡</span>Study Tips</h3>
+                <div class="tips">
+                    <div class="tip-item">
+                        <div class="tip-title">Daily Study (5 minutes)</div>
+                        <div class="tip-text">Choose one name, read meaning, write prayer, add notes</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-title">Weekly Focus</div>
+                        <div class="tip-text">Study one name all week, use in prayers, share insights</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-title">Family Study</div>
+                        <div class="tip-text">Pick "Name of the Week", discuss at meals</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sample Names Section -->
+            <div class="section">
+                <h3><span class="section-icon">📚</span>Start Here</h3>
+                <div class="sample-names">
+                    <div class="sample-name">
+                        <span class="name">Week 1: Elohim</span>
+                        <span class="meaning">God the Creator</span>
+                    </div>
+                    <div class="sample-name">
+                        <span class="name">Week 2: Yahweh</span>
+                        <span class="meaning">The Great I AM</span>
+                    </div>
+                    <div class="sample-name">
+                        <span class="name">Week 3: Jehovah-Jireh</span>
+                        <span class="meaning">The Lord Provides</span>
+                    </div>
+                    <div class="sample-name">
+                        <span class="name">Week 4: Emmanuel</span>
+                        <span class="meaning">God With Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <div class="challenge-box">
+                <div class="challenge-title">Your 30-Day Challenge</div>
+                <div class="challenge-text">Commit to 5 minutes daily for one month</div>
+                <div class="website-footer">
+                    <a href="https://names-of-god-study.vercel.app/" target="_blank">
+                        names-of-god-study.vercel.app
+                    </a>
+                </div>
+            </div>
+            
+            <div class="remember-note">
+                <strong>Remember:</strong> This is a starting point to complement our church teachings. We may expand this collection as our studies grow.
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="nav-buttons">
+            <a href="https://names-of-god-study.vercel.app/" class="btn" target="_blank">
+                🚀 Start Studying Now
+            </a>
+            <a href="javascript:window.print()" class="btn btn-secondary">
+                🖨️ Print This Guide
+            </a>
+        </div>
+    </div>
+</body>
+</html>
